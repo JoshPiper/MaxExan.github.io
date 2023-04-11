@@ -1,0 +1,94 @@
+collections:
+  - doing
+  - testimonials
+  - clients
+  - contentable
+  - education
+  - experience
+  - skills
+  - projects
+
+
+defaults:
+  -
+    scope:
+      path: "_doing"
+    values:
+      layout: "doing"
+  -
+    scope:
+      path: "_testimonials"
+    values:
+      layout: "testimonial"
+  - scope:
+      path: "_clients"
+    values:
+      layout: "client"
+  -
+    scope:
+      path: "_education"
+    values:
+      layout: "education"
+  -
+    scope:
+      path: "_experience"
+    values:
+      layout: "education"
+  -
+    scope:
+      path: "_skills"
+    values:
+      layout: "skill"
+  -
+    scope:
+      path: "_projects"
+    values:
+      layout: "project"
+
+title: max
+
+plugins:
+  - jekyll-seo-tag
+
+description: "A graphic designer with great experience."
+logo: "/img/logo.png"
+
+lang: en_GB
+locale: en_GB
+
+twitter:
+  card: summary
+
+information:
+  name: Max
+  title: Graphic Designer
+  mail: test@example.com
+  map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+  contacts:
+    - icon: mail-outline
+      title: Email
+      link: "mailto:test@example.com"
+      content: test@example.com
+    - icon: phone-portrait-outline
+      title: Phone
+      link: "tel:+1234"
+      content: 1234
+    - icon: calendar-outline
+      title: Birthday
+      content: "<time>Jan 1, 2023</time>"
+    - icon: location-outline
+      title: Location
+      content: "<address>Earth</address>"
+  socials:
+    - icon: logo-facebook
+      link: "https://google.com"
+    - icon: logo-twitter
+      link: "https://google.com"
+    - icon: logo-instagram
+      link: "https://google.com"
+
+filters:
+  - Web Design
+  - Web Development
+  - Applications
+  - Graphic Design
