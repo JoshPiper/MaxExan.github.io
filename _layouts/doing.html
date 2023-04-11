@@ -1,0 +1,13 @@
+<li class="service-item">
+	<div class="service-icon-box">
+		<img src="{{ page.icon | relative_url }}" alt="{{ page.icon_alt | default: 'Work Icon' }}" width="40">
+	</div>
+
+	<div class="service-content-box">
+		<h4 class="h4 service-item-title">{{ page.title | smartify }}</h4>
+
+		<span class="service-item-text">
+			{{ content | smartify }}
+		</span>
+	</div>
+</li>

@@ -1,0 +1,5 @@
+<li class="clients-item">
+	{% if page.link %}<a href="{{ page.link }}">{% endif %}
+		<img src="{{ page.image }}" alt="{{ page.alt | default: 'client logo' }}">
+	{% if page.link %}</a>{% endif %}
+</li>

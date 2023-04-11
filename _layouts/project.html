@@ -1,0 +1,14 @@
+<li class="project-item  active" data-filter-item data-category="{{ page.category | downcase }}">
+	<a href="#">
+		<figure class="project-img">
+			<div class="project-item-icon-box">
+				<ion-icon name="eye-outline"></ion-icon>
+			</div>
+
+			<img src="{{ page.image }}" alt="{{ page.alt | default: 'project image' }}" loading="lazy">
+		</figure>
+
+		<h3 class="project-title">{{ page.title }}</h3>
+		<p class="project-category">{{ page.category }}</p>
+	</a>
+</li>

@@ -1,0 +1,8 @@
+<li class="timeline-item">
+	<h4 class="h4 timeline-item-title">{{ page.title }}</h4>
+	<span>{{ page.date | date: "%Y" }} — {{ page.end | default: 'Present' }}</span>
+
+	<div class="timeline-text">
+		{{ content | smartify }}
+	</div>
+</li>
