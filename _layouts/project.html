@@ -5,7 +5,7 @@
 				<ion-icon name="eye-outline"></ion-icon>
 			</div>
 
-			<img src="{{ page.image }}" alt="{{ page.alt | default: 'project image' }}" loading="lazy">
+			<img src="{{ page.image | relative_url }}" alt="{{ page.alt | default: 'project image' }}" loading="lazy">
 		</figure>
 
 		<h3 class="project-title">{{ page.title }}</h3>
