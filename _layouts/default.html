@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ page.language | default: site.language | default: 'en-GB' }}">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link type="image/png" href="{{ '/img/logo.png' | relative_url }}" rel="icon">
+
+		<link type="text/css" rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+		<!-- Page Based CSS -->
+		{% for style in page.styles %}
+		<link type="text/css" rel="stylesheet" href="{{ style | relative_url }}">
+		{% endfor %}
+
+		{% seo %}
+		<meta name="theme-color" content="#1A1A3E">
+	</head>
+	<body>
+		<main>
+			{{ content }}
+		</main>
+
+		{% if page.media %}{% include mediabox.html %}{% endif %}
+	</body>
+
+	{% for script in page.scripts %}<script src="{{ script | relative_url }}"></script>{% endfor %}
+	{% if page.media %}<script src="{{ '/js/lightbox.js' | relative_url }}"></script>{% endif %}
+</html>
