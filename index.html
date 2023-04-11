@@ -510,17 +510,17 @@ scripts:
 						evt.preventDefault()
 						const values = new Map($(this).serializeArray().map(obj => [obj.name, obj.value]))
 						let header = "Contact from "
-						if (values['fullname'] === undefined && values['email'] === undefined){
+						if (values.get('fullname') === undefined && values.get('email') === undefined){
 							header += "someone"
-						} else if (values['fullname'] !== undefined && values['email'] === undefined){
-							header += values['fullname']
-						} else if (values['fullname'] === undefined && values['email'] !== undefined){
-							header += values["email"]
+						} else if (values.get('fullname') !== undefined && values.get('email') === undefined){
+							header += values.get('fullname')
+						} else if (values.get('fullname') === undefined && values.get('email') !== undefined){
+							header += values.get("email")
 						} else {
-							header += `${values["fullname"]} (${values['email']})`
+							header += `${values.get("fullname")} (${values.get('email')})`
 						}
 
-						window.open(`mailto:{{ site.information.mail }}?subject=${header}&body=${values['body']}}`);
+						window.open(`mailto:{{ site.information.mail }}?subject=${header}&body=${values.get('message') ?? ""}`);
 					})
 				});
 			</script>
@@ -531,12 +531,7 @@ scripts:
 </main>
 
 
-
-
-
-
 <!--
   - custom js link
 -->
 <script src="{{ '/js/script.js' | relative_url }}"></script>
-
