@@ -80,7 +80,7 @@ information:
       content: "<time>Jan 1, 2023</time>"
     - icon: location-outline
       title: Location
-      content: "<address>Earth</address>"
+      content: "<address>Malaysia</address>"
   socials:
     - icon: logo-facebook
       link: "https://google.com"
